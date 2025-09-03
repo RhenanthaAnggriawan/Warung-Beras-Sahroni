@@ -14,9 +14,9 @@ public class KasirWarungBeras {
 
     public static void main(String[] args) {
         try (Scanner sc = new Scanner(System.in)) {
-            System.out.println("=== Kasir Warung Beras ===");
-            BigDecimal kg = read(sc, "Masukkan jumlah beras (kg): ");
-            BigDecimal harga = read(sc, "Masukkan harga per kg (Rp): ");
+            System.out.println("=== Kasir Warung Beras Sahroni ===");
+            BigDecimal kg = read(sc, "Berapa jumlah beras (kg): ");
+            BigDecimal harga = read(sc, "Berapa harga per kg (Rp): ");
 
             BigDecimal total = kg.multiply(harga);
             BigDecimal potongan = total.multiply(DISKON);
@@ -27,7 +27,7 @@ public class KasirWarungBeras {
             BigDecimal akhirR = totalAkhir.setScale(0, RoundingMode.HALF_UP);
 
             System.out.println("Total sebelum diskon : " + RUPIAH.format(totalR));
-            System.out.println("Diskon 5%            : " + RUPIAH.format(potonganR));
+            System.out.println("Dapat Diskon 5%      : " + RUPIAH.format(potonganR));
             System.out.println("Total setelah diskon : " + RUPIAH.format(akhirR));
 
             BigDecimal tunai = read(sc, "Jumlah uang diterima (Rp): ");
